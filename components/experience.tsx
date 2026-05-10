@@ -121,7 +121,7 @@ export function Experience() {
                     : "text-muted-foreground bg-card hover:text-primary hover:bg-card/80 border border-border/50"
                 }`}
               >
-                <div className="w-5 h-5 rounded-sm bg-primary/20 flex items-center justify-center text-xs font-bold text-primary shrink-0 overflow-hidden">
+                <div className="w-5 h-5 bg-primary/20 flex items-center justify-center text-xs font-bold text-primary shrink-0 overflow-hidden">
                   {!logoErrors[exp.companyShort] ? (
                     <img
                       src={getCompanyLogoPath(exp.companyShort)}
