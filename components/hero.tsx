@@ -15,14 +15,14 @@ export function Hero() {
           Hello, I&apos;m
         </p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight">
-          <span className="text-balance">Your Name</span>
+          <span className="text-balance">[Your Name]</span>
         </h1>
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-muted-foreground mb-8 leading-tight">
           <span className="text-balance">Robotics & Machine Learning Engineer</span>
         </h2>
         <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
-          I build intelligent autonomous systems that bridge the gap between software and the physical world. 
-          Specializing in <span className="text-primary font-medium">computer vision</span>, <span className="text-primary font-medium">deep learning</span>, and <span className="text-primary font-medium">robotic perception</span>.
+          M.Sc. in Robotics and Data Science from EPFL, currently researching assistive robotics at MILA Quebec. 
+          Specializing in <span className="text-primary font-medium">autonomous navigation</span>, <span className="text-primary font-medium">wearable exoskeletons</span>, and <span className="text-primary font-medium">vision-language models</span>.
         </p>
         
         <div className="flex flex-wrap gap-4 mb-12">

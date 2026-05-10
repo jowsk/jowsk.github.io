@@ -5,75 +5,75 @@ import Link from "next/link";
 
 const featuredProjects = [
   {
-    title: "Autonomous Drone Navigation",
+    title: "Aerial Robotics - Autonomous Drone Navigation",
     description:
-      "End-to-end autonomous navigation system for quadcopters using deep reinforcement learning. Trained in simulation with domain randomization and deployed on real hardware achieving 95% success rate in obstacle-rich environments.",
-    technologies: ["Python", "PyTorch", "ROS2", "Gazebo", "PX4"],
+      "Engineered an autonomous navigation system for a quadrotor drone utilizing SLAM and Visual-Inertial Odometry. Developed and tuned flight controllers in simulation before successful deployment on physical hardware for real-world testing. Implemented Path Planning algorithms and trajectory tracking controllers, ensuring stable flight and precise navigation through planned waypoints.",
+    technologies: ["Python", "SLAM", "VIO", "Path Planning", "ROS"],
     github: "https://github.com",
-    demo: "https://youtube.com",
+    demo: null,
     image: "/projects/drone.jpg",
   },
   {
-    title: "Real-Time Object Detection Pipeline",
+    title: "Mobile Robotics - Autonomous Navigation",
     description:
-      "Production-ready object detection system optimized for edge deployment. Features custom YOLOv8 model with TensorRT acceleration, achieving 60 FPS on NVIDIA Jetson with 92% mAP on custom industrial dataset.",
-    technologies: ["Python", "PyTorch", "TensorRT", "CUDA", "Docker"],
+      "Developed a differential-drive autonomous system implementing Global and Local Path Planning with dynamic Obstacle Avoidance. Implemented Extended Kalman Filters (EKF) for robust State Estimation and sensor fusion, optimizing localization accuracy in cluttered environments.",
+    technologies: ["Python", "EKF", "Path Planning", "Sensor Fusion"],
     github: "https://github.com",
     demo: null,
-    image: "/projects/detection.jpg",
+    image: "/projects/mobile.jpg",
   },
   {
-    title: "Multi-Robot SLAM System",
+    title: "Deep Learning - Robust Content Moderation",
     description:
-      "Distributed SLAM system enabling multiple robots to collaboratively map large environments. Implements pose graph optimization with loop closure detection and map merging for warehouse automation.",
-    technologies: ["C++", "ROS2", "g2o", "OpenCV", "PCL"],
+      "Developed robust moderation architectures by investigating adversarial training techniques to detect unsafe content. Engineered a deep learning model that outperformed baseline systems in identifying complex adversarial inputs.",
+    technologies: ["Python", "PyTorch", "Deep Learning", "Adversarial ML"],
     github: "https://github.com",
-    demo: "https://youtube.com",
-    image: "/projects/slam.jpg",
+    demo: null,
+    image: "/projects/moderation.jpg",
   },
 ];
 
 const otherProjects = [
   {
-    title: "Point Cloud Segmentation",
+    title: "Computational Motor Control",
     description:
-      "Implementation of PointNet++ for semantic segmentation of LiDAR point clouds with custom data augmentation pipeline.",
-    technologies: ["Python", "PyTorch", "Open3D"],
+      "Simulated bio-inspired open- and closed-loop control architectures in MuJoCo for amphibious robotic systems with adaptive gait switching based on terrain (land vs. water).",
+    technologies: ["Python", "MuJoCo", "Control Systems"],
     github: "https://github.com",
   },
   {
-    title: "Robot Arm Control",
+    title: "Haptic Human-Robot Interfaces",
     description:
-      "MoveIt2-based motion planning and control system for 6-DOF robot arm with collision avoidance and trajectory optimization.",
-    technologies: ["C++", "ROS2", "MoveIt2"],
+      "Designed and implemented a PID-controlled haptic interface driven by electromyography (EMG) signals for real-time human-robot interaction.",
+    technologies: ["Python", "EMG", "PID Control"],
     github: "https://github.com",
   },
   {
-    title: "Sensor Fusion Library",
+    title: "Natural Language Processing",
     description:
-      "Lightweight C++ library for fusing IMU, GPS, and wheel odometry data using Extended Kalman Filter.",
-    technologies: ["C++", "Eigen", "CMake"],
+      "Fine-tuned Meta's Llama foundational models using Direct Preference Optimization (DPO) and custom classification heads for engineering-specific Q&A and multiple-choice reasoning.",
+    technologies: ["Python", "PyTorch", "LLMs", "DPO"],
     github: "https://github.com",
   },
   {
-    title: "Sim-to-Real Transfer",
+    title: "Image Analysis & Pattern Recognition",
     description:
-      "Framework for training policies in simulation and deploying to real robots with domain adaptation techniques.",
-    technologies: ["Python", "Isaac Gym", "PyTorch"],
+      "Developed a computer vision pipeline for automatic detection and re-clustering of puzzle pieces in heterogeneous scenes, leveraging feature extraction and data-driven clustering methods.",
+    technologies: ["Python", "OpenCV", "Clustering"],
     github: "https://github.com",
   },
   {
-    title: "Visual Odometry",
+    title: "Model Predictive Control",
     description:
-      "Stereo visual odometry pipeline using ORB features with bundle adjustment for accurate pose estimation.",
-    technologies: ["Python", "OpenCV", "NumPy"],
+      "Designed a model predictive control (MPC) system in MATLAB to simulate and stabilize rocket flight dynamics following a predefined trajectory.",
+    technologies: ["MATLAB", "MPC", "Control Systems"],
     github: "https://github.com",
   },
   {
-    title: "Behavior Trees Library",
+    title: "Wearable Exoskeletons Research",
     description:
-      "Flexible behavior tree implementation for robot task planning with visualization and debugging tools.",
-    technologies: ["C++", "ROS2", "Qt"],
+      "Developed IMU-based control algorithms on STM32 for real-time actuation of hip and ankle exoskeletons, enabling data-driven human-robot interaction.",
+    technologies: ["C", "STM32", "IMU", "Embedded"],
     github: "https://github.com",
   },
 ];

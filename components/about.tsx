@@ -6,22 +6,22 @@ const highlights = [
   {
     icon: Bot,
     title: "Robotics",
-    description: "ROS/ROS2, motion planning, SLAM, sensor fusion",
+    description: "SLAM, autonomous navigation, motion planning, sensor fusion",
   },
   {
     icon: Brain,
     title: "Machine Learning",
-    description: "Deep learning, reinforcement learning, neural networks",
+    description: "Deep learning, reinforcement learning, VLMs, NLP",
   },
   {
     icon: Eye,
     title: "Computer Vision",
-    description: "Object detection, segmentation, 3D reconstruction",
+    description: "Object detection, CNNs, multimodal perception",
   },
   {
     icon: Cpu,
     title: "Embedded Systems",
-    description: "Real-time systems, microcontrollers, edge computing",
+    description: "STM32 microcontrollers, real-time control, wearable robotics",
   },
 ];
 
@@ -39,21 +39,21 @@ export function About() {
         <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-start">
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              I&apos;m a passionate Robotics and Machine Learning Engineer with a focus on building 
-              intelligent systems that can perceive, reason, and act in the physical world. My 
-              journey began with a fascination for autonomous robots and has evolved into expertise 
-              across the full robotics stack.
+              I&apos;m a Robotics and Machine Learning Engineer currently pursuing my M.Sc. in Robotics 
+              and Data Science at EPFL, with a Master Thesis at Harvard University&apos;s Slade Lab. 
+              My passion lies in building intelligent systems that can perceive, reason, and act 
+              in the physical world.
             </p>
             <p>
-              Currently, I&apos;m focused on developing perception systems for autonomous vehicles 
-              and industrial robots. I enjoy tackling complex problems at the intersection of 
-              hardware and software, from sensor calibration to deploying neural networks on 
-              embedded platforms.
+              Currently, I&apos;m a Research Collaborator at MILA Quebec, developing a robotic guide 
+              dog system for assistive navigation using Vision-Language Models and Reinforcement 
+              Learning on a Unitree Go2 quadruped robot. Previously, I worked on wearable robotic 
+              exoskeletons at Harvard and computer vision pipelines at Chanel.
             </p>
             <p>
-              When I&apos;m not training models or debugging ROS nodes, you&apos;ll find me contributing 
-              to open-source robotics projects, experimenting with new sensor technologies, or 
-              building custom robots in my home lab.
+              I speak English, French (native), Polish (fluent), and German. When I&apos;m not training 
+              RL policies or debugging sensor fusion algorithms, I enjoy exploring the intersection 
+              of robotics and human augmentation technologies.
             </p>
           </div>
 

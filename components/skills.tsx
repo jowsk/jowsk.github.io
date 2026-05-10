@@ -2,49 +2,40 @@
 
 const skillCategories = [
   {
-    title: "Programming Languages",
-    skills: ["Python", "C++", "C", "CUDA", "Rust", "TypeScript"],
+    title: "Programming",
+    skills: ["Python", "C/C++", "MATLAB", "SQL"],
+  },
+  {
+    title: "Deep Learning",
+    skills: ["PyTorch", "TensorFlow"],
+  },
+  {
+    title: "Data & ML Tools",
+    skills: ["Pandas", "NumPy", "OpenCV", "Scikit-learn", "Matplotlib", "Seaborn", "MLflow", "TensorBoard"],
   },
   {
     title: "Machine Learning",
-    skills: [
-      "PyTorch",
-      "TensorFlow",
-      "scikit-learn",
-      "OpenCV",
-      "TensorRT",
-      "ONNX",
-    ],
+    skills: ["Classification", "Clustering", "Regression", "NLP", "Vision Language Models"],
   },
   {
-    title: "Robotics & Embedded",
-    skills: ["ROS/ROS2", "Gazebo", "MoveIt2", "PX4", "Arduino", "NVIDIA Jetson"],
+    title: "Robotics",
+    skills: ["Sensor Fusion", "SLAM", "Mapping", "Control Systems", "Reinforcement Learning", "Autonomous Navigation", "Motion Planning", "Obstacle Avoidance"],
   },
   {
-    title: "Tools & Infrastructure",
-    skills: ["Git", "Docker", "Linux", "CMake", "CI/CD", "AWS"],
+    title: "Cloud & DevOps",
+    skills: ["Azure", "Databricks", "DevOps", "Git", "Linux", "Docker"],
   },
   {
-    title: "Perception & Vision",
-    skills: [
-      "SLAM",
-      "Object Detection",
-      "Point Clouds",
-      "Sensor Fusion",
-      "Calibration",
-      "3D Reconstruction",
-    ],
+    title: "Embedded Systems",
+    skills: ["STM32 Microcontrollers"],
   },
   {
-    title: "AI/ML Techniques",
-    skills: [
-      "Deep Learning",
-      "Reinforcement Learning",
-      "CNNs",
-      "Transformers",
-      "GANs",
-      "Imitation Learning",
-    ],
+    title: "Experimental Systems",
+    skills: ["Motion Capture (Qualisys)", "EMG", "Force Plates", "Metabolic Analysis (COSMED)"],
+  },
+  {
+    title: "Design & Fabrication",
+    skills: ["CATIA", "Fusion 360", "3D Printing", "CNC Milling", "Laser Cutting"],
   },
 ];
 
