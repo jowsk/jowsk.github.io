@@ -10,7 +10,7 @@ export function Footer() {
         <div className="flex flex-col items-center gap-6">
           <div className="flex gap-4">
             <Link
-              href="https://github.com"
+              href="https://github.com/jowsk"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 bg-secondary/50 rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
@@ -19,7 +19,7 @@ export function Footer() {
               <Github className="w-5 h-5" />
             </Link>
             <Link
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/joannawolski"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 bg-secondary/50 rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
@@ -28,7 +28,7 @@ export function Footer() {
               <Linkedin className="w-5 h-5" />
             </Link>
             <Link
-              href="mailto:your.email@example.com"
+              href="mailto:joannawolski@gmail.com"
               className="w-10 h-10 bg-secondary/50 rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
               aria-label="Email"
             >

@@ -18,7 +18,7 @@ export function Contact() {
           get back to you!
         </p>
         <Link
-          href="mailto:your.email@example.com"
+          href="mailto:joannawolski@gmail.com"
           className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
         >
           <Mail className="w-5 h-5" />

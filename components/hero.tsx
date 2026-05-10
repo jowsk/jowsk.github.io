@@ -15,10 +15,10 @@ export function Hero() {
           Hello, I&apos;m
         </p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight">
-          <span className="text-balance">[Your Name]</span>
+          <span className="text-balance">[Joanna Wolski]</span>
         </h1>
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-muted-foreground mb-8 leading-tight">
-          <span className="text-balance">Robotics & Machine Learning Engineer</span>
+          <span className="text-balance">Robotics & Machine Learning EPFL Engineer</span>
         </h2>
         <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
           M.Sc. in Robotics and Data Science from EPFL, currently researching assistive robotics at MILA Quebec. 
@@ -43,7 +43,7 @@ export function Hero() {
 
         <div className="flex gap-6">
           <Link
-            href="https://github.com"
+            href="https://github.com/jowsk"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
@@ -52,7 +52,7 @@ export function Hero() {
             <Github className="w-6 h-6" />
           </Link>
           <Link
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/joannawolski"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
@@ -61,7 +61,7 @@ export function Hero() {
             <Linkedin className="w-6 h-6" />
           </Link>
           <Link
-            href="mailto:your.email@example.com"
+            href="mailto:joannawolski@gmail.com"
             className="text-muted-foreground hover:text-primary transition-colors"
             aria-label="Email"
           >
