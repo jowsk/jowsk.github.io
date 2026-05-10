@@ -100,9 +100,30 @@ export function Experience() {
             <h3 className="text-xl font-semibold text-foreground mb-1">
               {experiences[activeTab].title}
             </h3>
-            <p className="text-primary font-medium mb-2">
+              <div className="flex flex-wrap items-center gap-x-2 text-primary font-medium mb-2">
+            {/* Company Link */}
+            <a 
+              href={experiences[activeTab].companyUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:underline decoration-2 underline-offset-4"
+            >
               {experiences[activeTab].company}
-            </p>
+            </a>
+            {/* Lab Link (Optional) */}
+            {experiences[activeTab].labName && (
+              <>
+                <span className="text-muted-foreground">|</span>
+                <a 
+                  href={experiences[activeTab].labUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary/80 hover:text-primary hover:underline decoration-2 underline-offset-4"
+                >
+                  {experiences[activeTab].labName}
+                </a>
+              </>
+            )}
             <p className="text-muted-foreground text-sm mb-6">
               {experiences[activeTab].period}
             </p>
