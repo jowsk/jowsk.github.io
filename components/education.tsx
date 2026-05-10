@@ -1,6 +1,6 @@
 "use client";
 
-import { GraduationCap } from "lucide-react";
+import { useState } from "react";
 
 const education = [
   {
@@ -40,6 +40,30 @@ const education = [
 ];
 
 export function Education() {
+  const [logoErrors, setLogoErrors] = useState<{ [key: string]: boolean }>({});
+
+  const institutionLogoMap: { [key: string]: string } = {
+    "Harvard University": "/logos/harvard.png",
+    "EPFL": "/logos/epfl.png",
+    "Karlsruhe Institute of Technology (KIT)": "/logos/kit.png",
+  };
+
+  const getInstitutionLogoPath = (institutionName: string) => {
+    return institutionLogoMap[institutionName] || "/logos/placeholder.png";
+  };
+
+  const getInstitutionInitials = (institutionName: string) => {
+    return institutionName
+      .split(" ")
+      .map((word) => word[0])
+      .join("")
+      .toUpperCase()
+      .slice(0, 2);
+  };
+
+  const handleLogoError = (institutionName: string) => {
+    setLogoErrors((prev) => ({ ...prev, [institutionName]: true }));
+  };
   return (
     <section id="education" className="px-6 md:px-12 lg:px-24 py-24">
       <div className="max-w-4xl mx-auto">
@@ -57,9 +81,21 @@ export function Education() {
               className="bg-card rounded-2xl p-6 border border-border/50 hover:border-primary/30 hover:shadow-md transition-all duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                  <GraduationCap className="w-6 h-6 text-primary" />
-                </div>
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 overflow-hidden">
+                {!logoErrors[edu.institution] ? (
+                  <img
+                    src={getInstitutionLogoPath(edu.institution)}
+                    alt={`${edu.institution} logo`}
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                    onError={() => handleLogoError(edu.institution)}
+                  />
+                ) : (
+                  <span className="text-xs font-bold text-primary">
+                    {getInstitutionInitials(edu.institution)}
+                  </span>
+                )}
+              </div>
                 <div className="flex-1">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
                     <h3 className="text-lg font-semibold text-foreground">
