@@ -5,6 +5,7 @@ import { useState, type SyntheticEvent } from "react";
 const experiences = [
   {
     company: "Mila - Quebec Artificial Intelligence Institute",
+    companyShort: "Mila",
     companyUrl: "https://mila.quebec",
     title: "Research Collaborator",
     period: "Feb 2026 — Present",
@@ -17,6 +18,7 @@ const experiences = [
   },
   {
     company: "Harvard SEAS",
+    companyShort: "Harvard",
     companyUrl: "https://www.seas.harvard.edu",
     lab: "Slade Lab",
     labUrl: "https://sladelab.seas.harvard.edu",
@@ -31,6 +33,7 @@ const experiences = [
   },
   {
     company: "Chanel",
+    companyShort: "Chanel",
     companyUrl: "https://www.chanel.com",
     title: "Data Science Intern",
     period: "Sep 2024 — Mar 2025",
@@ -42,6 +45,7 @@ const experiences = [
   },
   {
     company: "EPFL",
+    companyShort: "EPFL",
     companyUrl: "https://www.epfl.ch",
     lab: "Mobile Robotic Systems Group (MOBOTS)",
     labUrl: "https://www.epfl.ch/labs/mobots/",
@@ -55,6 +59,7 @@ const experiences = [
   },
   {
     company: "EPFL",
+    companyShort: "EPFL",
     companyUrl: "https://www.epfl.ch",
     lab: "Basics of Mobile Robotics (MICRO-452)",
     labUrl: "https://edu.epfl.ch/coursebook/en/basics-of-mobile-robotics-MICRO-452",
@@ -73,18 +78,18 @@ export function Experience() {
   const [logoErrors, setLogoErrors] = useState<{ [key: string]: boolean }>({});
 
   const companyLogoMap: { [key: string]: string } = {
-    "MILA Quebec": "/logos/mila.png",
-    "Harvard SEAS": "/logos/harvard.png",
+    "Mila": "/logos/mila.png",
+    "Harvard": "/logos/harvard.png",
     "Chanel": "/logos/chanel.png",
     "EPFL": "/logos/epfl.png",
   };
 
-  const getCompanyLogoPath = (companyName: string) => {
-    return companyLogoMap[companyName] || "/logos/placeholder.png";
+  const getCompanyLogoPath = (companyShort: string) => {
+    return companyLogoMap[companyShort] || "/logos/placeholder.png";
   };
 
-  const getCompanyInitials = (companyName: string) => {
-    return companyName
+  const getCompanyInitials = (companyShort: string) => {
+    return companyShort
       .split(" ")
       .map((word) => word[0])
       .join("")
@@ -92,8 +97,8 @@ export function Experience() {
       .slice(0, 2);
   };
 
-  const handleLogoError = (companyName: string) => {
-    setLogoErrors((prev) => ({ ...prev, [companyName]: true }));
+  const handleLogoError = (companyShort: string) => {
+    setLogoErrors((prev) => ({ ...prev, [companyShort]: true }));
   };
 
   return (
@@ -117,19 +122,19 @@ export function Experience() {
                 }`}
               >
                 <div className="w-5 h-5 rounded-sm bg-primary/20 flex items-center justify-center text-xs font-bold text-primary shrink-0 overflow-hidden">
-                  {!logoErrors[exp.company] ? (
+                  {!logoErrors[exp.companyShort] ? (
                     <img
-                      src={getCompanyLogoPath(exp.company)}
-                      alt={`${exp.company} logo`}
+                      src={getCompanyLogoPath(exp.companyShort)}
+                      alt={`${exp.companyShort} logo`}
                       className="w-full h-full object-contain"
                       loading="lazy"
-                      onError={() => handleLogoError(exp.company)}
+                      onError={() => handleLogoError(exp.companyShort)}
                     />
                   ) : (
-                    getCompanyInitials(exp.company)
+                    getCompanyInitials(exp.companyShort)
                   )}
                 </div>
-                <span>{exp.company}</span>
+                <span>{exp.companyShort}</span>
               </button>
             ))}
           </div>
