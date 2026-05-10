@@ -5,11 +5,11 @@ import { useState } from "react";
 const education = [
   {
     degree: "Master Thesis",
-    institution: "Harvard University",
+    institution: "Harvard SEAS",
     institutionUrl: "https://www.harvard.edu",
     lab: "Slade Lab",
     labUrl: "https://sladelab.seas.harvard.edu",
-    location: "John A. Paulson School of Engineering and Applied Sciences, USA",
+    location: "Harvard John A. Paulson School of Engineering and Applied Sciences, USA",
     period: "Mar 2025 — Oct 2025",
     grade: "Grade: 6.0/6.0",
   },
@@ -23,9 +23,9 @@ const education = [
   },
   {
     degree: "Bachelor Exchange (3rd Year)",
-    institution: "Karlsruhe Institute of Technology (KIT)",
+    institution: "KIT",
     institutionUrl: "https://www.kit.edu",
-    location: "Germany",
+    location: "Karlsruhe Institute of Technology, Germany",
     period: "Sep 2021 — Sep 2022",
     grade: null,
   },
@@ -43,9 +43,9 @@ export function Education() {
   const [logoErrors, setLogoErrors] = useState<{ [key: string]: boolean }>({});
 
   const institutionLogoMap: { [key: string]: string } = {
-    "Harvard University": "/logos/harvard.png",
+    "Harvard SEAS": "/logos/harvard.png",
     "EPFL": "/logos/epfl.png",
-    "Karlsruhe Institute of Technology (KIT)": "/logos/kit.png",
+    "KIT": "/logos/kit.png",
   };
 
   const getInstitutionLogoPath = (institutionName: string) => {
@@ -70,9 +70,6 @@ export function Education() {
         <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
           Education
         </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
-          My academic journey in engineering and robotics
-        </p>
 
         <div className="space-y-6">
           {education.map((edu) => (
@@ -81,7 +78,7 @@ export function Education() {
               className="bg-card rounded-2xl p-6 border border-border/50 hover:border-primary/30 hover:shadow-md transition-all duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 overflow-hidden">
+                <div className="w-12 h-12 bg-primary/10 rounded-sm flex items-center justify-center shrink-0 overflow-hidden">
                 {!logoErrors[edu.institution] ? (
                   <img
                     src={getInstitutionLogoPath(edu.institution)}
