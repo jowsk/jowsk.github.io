@@ -20,7 +20,7 @@ export function Navigation() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="flex items-center justify-between px-6 md:px-12 lg:px-24 py-4">
         <Link href="/" className="text-primary font-semibold text-lg tracking-tight">
-          robotics<span className="text-accent">&</span>ml
+          Joanna Wolski<span className="text-accent">
         </Link>
 
         {/* Desktop Navigation */}
