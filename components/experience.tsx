@@ -4,7 +4,7 @@ import { useState, type SyntheticEvent } from "react";
 
 const experiences = [
   {
-    company: "MILA Quebec",
+    company: "Mila - Quebec Artificial Intelligence Institute",
     companyUrl: "https://mila.quebec",
     title: "Research Collaborator",
     period: "Feb 2026 — Present",
@@ -70,10 +70,17 @@ const experiences = [
 
 export function Experience() {
   const [activeTab, setActiveTab] = useState(0);
+  const [logoErrors, setLogoErrors] = useState<{ [key: string]: boolean }>({});
 
-  const getCompanyLogoUrl = (companyUrl: string) => {
-    const hostname = new URL(companyUrl).hostname.replace(/^www\./, "");
-    return `https://logo.clearbit.com/${hostname}`;
+  const companyLogoMap: { [key: string]: string } = {
+    "MILA Quebec": "/logos/mila.png",
+    "Harvard SEAS": "/logos/harvard.png",
+    "Chanel": "/logos/chanel.png",
+    "EPFL": "/logos/epfl.png",
+  };
+
+  const getCompanyLogoPath = (companyName: string) => {
+    return companyLogoMap[companyName] || "/logos/placeholder.png";
   };
 
   const getCompanyInitials = (companyName: string) => {
@@ -83,6 +90,10 @@ export function Experience() {
       .join("")
       .toUpperCase()
       .slice(0, 2);
+  };
+
+  const handleLogoError = (companyName: string) => {
+    setLogoErrors((prev) => ({ ...prev, [companyName]: true }));
   };
 
   return (
@@ -108,19 +119,18 @@ export function Experience() {
                     : "text-muted-foreground bg-card hover:text-primary hover:bg-card/80 border border-border/50"
                 }`}
               >
-                <div className="w-5 h-5 rounded-sm bg-primary/20 flex items-center justify-center text-xs font-bold text-primary shrink-0">
-                  <img
-                    src={getCompanyLogoUrl(exp.companyUrl)}
-                    alt={`${exp.company} logo`}
-                    className="w-full h-full rounded-sm object-contain bg-white/90 p-0.5"
-                    loading="lazy"
-                    onError={(event: SyntheticEvent<HTMLImageElement>) => {
-                      const parent = event.currentTarget.parentElement;
-                      if (parent) {
-                        parent.textContent = getCompanyInitials(exp.company);
-                      }
-                    }}
-                  />
+                <div className="w-5 h-5 rounded-sm bg-primary/20 flex items-center justify-center text-xs font-bold text-primary shrink-0 overflow-hidden">
+                  {!logoErrors[exp.company] ? (
+                    <img
+                      src={getCompanyLogoPath(exp.company)}
+                      alt={`${exp.company} logo`}
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                      onError={() => handleLogoError(exp.company)}
+                    />
+                  ) : (
+                    getCompanyInitials(exp.company)
+                  )}
                 </div>
                 <span>{exp.company}</span>
               </button>
