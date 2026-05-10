@@ -81,12 +81,13 @@ const otherProjects = [
 export function Projects() {
   return (
     <section id="projects" className="px-6 md:px-12 lg:px-24 py-24">
-      <div className="max-w-5xl">
-        <h2 className="flex items-center gap-4 text-2xl md:text-3xl font-bold text-foreground mb-12">
-          <span className="text-primary font-mono text-xl">03.</span>
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
           Projects
-          <span className="flex-1 h-px bg-border ml-4 max-w-xs" />
         </h2>
+        <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
+          A selection of projects I&apos;ve worked on
+        </p>
 
         {/* Featured Projects */}
         <div className="space-y-24 mb-24">
@@ -99,12 +100,12 @@ export function Projects() {
             >
               {/* Project Image Placeholder */}
               <div
-                className={`md:col-span-7 aspect-video bg-card rounded-lg border border-border overflow-hidden ${
+                className={`md:col-span-7 aspect-video bg-card rounded-2xl border border-border/50 overflow-hidden shadow-sm ${
                   index % 2 === 1 ? "md:col-start-6 md:row-start-1" : ""
                 }`}
               >
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                  <span className="text-primary/50 font-mono text-sm">
+                <div className="w-full h-full bg-gradient-to-br from-primary/10 via-accent/10 to-secondary flex items-center justify-center">
+                  <span className="text-muted-foreground/50 text-sm">
                     Project Preview
                   </span>
                 </div>
@@ -116,26 +117,28 @@ export function Projects() {
                   index % 2 === 1 ? "md:col-start-1" : "md:col-start-6"
                 }`}
               >
-                <p className="text-primary font-mono text-sm mb-2">
+                <p className="text-primary font-medium text-sm mb-2 uppercase tracking-wide">
                   Featured Project
                 </p>
                 <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
                   {project.title}
                 </h3>
-                <div className="bg-card p-6 rounded-lg border border-border shadow-lg mb-4">
+                <div className="bg-card p-6 rounded-2xl border border-border/50 shadow-sm mb-4">
                   <p className="text-muted-foreground leading-relaxed">
                     {project.description}
                   </p>
                 </div>
-                <ul
-                  className={`flex flex-wrap gap-3 mb-4 font-mono text-sm text-muted-foreground ${
+                <div
+                  className={`flex flex-wrap gap-2 mb-4 ${
                     index % 2 === 1 ? "md:justify-end" : ""
                   }`}
                 >
                   {project.technologies.map((tech) => (
-                    <li key={tech}>{tech}</li>
+                    <span key={tech} className="px-3 py-1 bg-secondary/50 text-muted-foreground rounded-full text-sm">
+                      {tech}
+                    </span>
                   ))}
-                </ul>
+                </div>
                 <div
                   className={`flex gap-4 ${
                     index % 2 === 1 ? "md:justify-end" : ""
@@ -171,14 +174,16 @@ export function Projects() {
         <h3 className="text-center text-xl font-semibold text-foreground mb-8">
           Other Noteworthy Projects
         </h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {otherProjects.map((project) => (
             <div
               key={project.title}
-              className="bg-card p-6 rounded-lg border border-border hover:border-primary/50 hover:-translate-y-1 transition-all group"
+              className="bg-card p-6 rounded-2xl border border-border/50 hover:border-primary/30 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group"
             >
-              <div className="flex justify-between items-start mb-6">
-                <Folder className="w-10 h-10 text-primary" />
+              <div className="flex justify-between items-start mb-5">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                  <Folder className="w-6 h-6 text-primary" />
+                </div>
                 <Link
                   href={project.github}
                   target="_blank"
@@ -195,11 +200,13 @@ export function Projects() {
               <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                 {project.description}
               </p>
-              <ul className="flex flex-wrap gap-2 font-mono text-xs text-muted-foreground">
+              <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech) => (
-                  <li key={tech}>{tech}</li>
+                  <span key={tech} className="px-2 py-1 bg-secondary/50 text-muted-foreground rounded-full text-xs">
+                    {tech}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>

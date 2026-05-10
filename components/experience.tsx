@@ -42,25 +42,26 @@ export function Experience() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section id="experience" className="px-6 md:px-12 lg:px-24 py-24">
-      <div className="max-w-4xl">
-        <h2 className="flex items-center gap-4 text-2xl md:text-3xl font-bold text-foreground mb-12">
-          <span className="text-primary font-mono text-xl">02.</span>
+    <section id="experience" className="px-6 md:px-12 lg:px-24 py-24 bg-secondary/30">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
           Experience
-          <span className="flex-1 h-px bg-border ml-4 max-w-xs" />
         </h2>
+        <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
+          My professional journey in robotics and machine learning
+        </p>
 
         <div className="flex flex-col md:flex-row gap-4 md:gap-8">
           {/* Tabs */}
-          <div className="flex md:flex-col overflow-x-auto md:overflow-visible border-b md:border-b-0 md:border-l border-border">
+          <div className="flex md:flex-col overflow-x-auto md:overflow-visible gap-2">
             {experiences.map((exp, index) => (
               <button
                 key={exp.company}
                 onClick={() => setActiveTab(index)}
-                className={`px-4 py-3 text-sm font-mono whitespace-nowrap text-left transition-colors ${
+                className={`px-5 py-3 text-sm font-medium whitespace-nowrap text-left rounded-xl transition-all duration-300 ${
                   activeTab === index
-                    ? "text-primary bg-primary/10 border-b-2 md:border-b-0 md:border-l-2 border-primary md:-ml-px"
-                    : "text-muted-foreground hover:text-primary hover:bg-primary/5"
+                    ? "text-primary-foreground bg-primary shadow-md"
+                    : "text-muted-foreground bg-card hover:text-primary hover:bg-card/80 border border-border/50"
                 }`}
               >
                 {exp.company}
@@ -69,12 +70,14 @@ export function Experience() {
           </div>
 
           {/* Content */}
-          <div className="py-4 md:py-0 md:pl-4">
+          <div className="py-4 md:py-0 md:pl-6 flex-1 bg-card rounded-2xl p-6 border border-border/50">
             <h3 className="text-xl font-semibold text-foreground mb-1">
-              {experiences[activeTab].title}{" "}
-              <span className="text-primary">@ {experiences[activeTab].company}</span>
+              {experiences[activeTab].title}
             </h3>
-            <p className="text-muted-foreground font-mono text-sm mb-6">
+            <p className="text-primary font-medium mb-2">
+              {experiences[activeTab].company}
+            </p>
+            <p className="text-muted-foreground text-sm mb-6">
               {experiences[activeTab].period}
             </p>
             <ul className="space-y-3">
@@ -83,7 +86,7 @@ export function Experience() {
                   key={index}
                   className="flex gap-3 text-muted-foreground leading-relaxed"
                 >
-                  <span className="text-primary mt-1.5">▹</span>
+                  <span className="text-primary mt-1">•</span>
                   <span>{item}</span>
                 </li>
               ))}

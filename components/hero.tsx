@@ -5,33 +5,37 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 py-20">
-      <div className="max-w-4xl">
-        <p className="text-primary font-mono text-sm mb-4 tracking-wider">
+    <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 py-20 relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      
+      <div className="max-w-4xl relative">
+        <p className="text-primary font-medium text-sm mb-4 tracking-widest uppercase">
           Hello, I&apos;m
         </p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight">
           <span className="text-balance">Your Name</span>
         </h1>
-        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-muted-foreground mb-8 leading-tight">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-muted-foreground mb-8 leading-tight">
           <span className="text-balance">Robotics & Machine Learning Engineer</span>
         </h2>
         <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
           I build intelligent autonomous systems that bridge the gap between software and the physical world. 
-          Specializing in <span className="text-primary">computer vision</span>, <span className="text-primary">deep learning</span>, and <span className="text-primary">robotic perception</span>.
+          Specializing in <span className="text-primary font-medium">computer vision</span>, <span className="text-primary font-medium">deep learning</span>, and <span className="text-primary font-medium">robotic perception</span>.
         </p>
         
         <div className="flex flex-wrap gap-4 mb-12">
           <Link
             href="#projects"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-full hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
           >
             View Projects
             <ExternalLink className="w-4 h-4" />
           </Link>
           <Link
             href="#contact"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-medium rounded-md hover:bg-primary/10 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary/30 text-primary font-medium rounded-full hover:border-primary hover:bg-primary/5 transition-all duration-300"
           >
             Get in Touch
           </Link>

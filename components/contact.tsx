@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export function Contact() {
   return (
-    <section id="contact" className="px-6 md:px-12 lg:px-24 py-24">
+    <section id="contact" className="px-6 md:px-12 lg:px-24 py-24 bg-secondary/30">
       <div className="max-w-2xl mx-auto text-center">
-        <p className="text-primary font-mono text-sm mb-4">05. What&apos;s Next?</p>
+        <p className="text-primary font-medium text-sm mb-4 uppercase tracking-wide">Let&apos;s Connect</p>
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
           Get In Touch
         </h2>
@@ -19,7 +19,7 @@ export function Contact() {
         </p>
         <Link
           href="mailto:your.email@example.com"
-          className="inline-flex items-center gap-2 px-8 py-4 border border-primary text-primary font-mono rounded-md hover:bg-primary/10 transition-colors"
+          className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
         >
           <Mail className="w-5 h-5" />
           Say Hello

@@ -28,14 +28,15 @@ const highlights = [
 export function About() {
   return (
     <section id="about" className="px-6 md:px-12 lg:px-24 py-24">
-      <div className="max-w-4xl">
-        <h2 className="flex items-center gap-4 text-2xl md:text-3xl font-bold text-foreground mb-8">
-          <span className="text-primary font-mono text-xl">01.</span>
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
           About Me
-          <span className="flex-1 h-px bg-border ml-4 max-w-xs" />
         </h2>
+        <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
+          Building intelligent systems that bridge software and the physical world
+        </p>
 
-        <div className="grid md:grid-cols-[3fr_2fr] gap-12">
+        <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-start">
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
               I&apos;m a passionate Robotics and Machine Learning Engineer with a focus on building 
@@ -60,9 +61,11 @@ export function About() {
             {highlights.map((item) => (
               <div
                 key={item.title}
-                className="p-4 bg-card rounded-lg border border-border hover:border-primary/50 transition-colors"
+                className="p-5 bg-card rounded-2xl border border-border/50 hover:border-primary/30 hover:shadow-md transition-all duration-300"
               >
-                <item.icon className="w-8 h-8 text-primary mb-3" />
+                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
+                  <item.icon className="w-5 h-5 text-primary" />
+                </div>
                 <h3 className="font-semibold text-foreground text-sm mb-1">
                   {item.title}
                 </h3>
