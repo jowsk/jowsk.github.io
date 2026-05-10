@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type SyntheticEvent } from "react";
 
 const experiences = [
   {
@@ -71,6 +71,11 @@ const experiences = [
 export function Experience() {
   const [activeTab, setActiveTab] = useState(0);
 
+  const getCompanyLogoUrl = (companyUrl: string) => {
+    const hostname = new URL(companyUrl).hostname.replace(/^www\./, "");
+    return `https://logo.clearbit.com/${hostname}`;
+  };
+
   return (
     <section id="experience" className="px-6 md:px-12 lg:px-24 py-24 bg-secondary/30">
       <div className="max-w-4xl mx-auto">
@@ -86,15 +91,24 @@ export function Experience() {
           <div className="flex md:flex-col overflow-x-auto md:overflow-visible gap-2">
             {experiences.map((exp, index) => (
               <button
-                key={exp.company}
+                key={`${exp.company}-${exp.title}`}
                 onClick={() => setActiveTab(index)}
-                className={`px-5 py-3 text-sm font-medium whitespace-nowrap text-left rounded-xl transition-all duration-300 ${
+                className={`px-5 py-3 text-sm font-medium whitespace-nowrap text-left rounded-xl transition-all duration-300 flex items-center gap-2 ${
                   activeTab === index
                     ? "text-primary-foreground bg-primary shadow-md"
                     : "text-muted-foreground bg-card hover:text-primary hover:bg-card/80 border border-border/50"
                 }`}
               >
-                {exp.company}
+                <img
+                  src={getCompanyLogoUrl(exp.companyUrl)}
+                  alt={`${exp.company} logo`}
+                  className="w-5 h-5 rounded-sm object-contain bg-white/90 p-0.5"
+                  loading="lazy"
+                  onError={(event: SyntheticEvent<HTMLImageElement>) => {
+                    event.currentTarget.style.display = "none";
+                  }}
+                />
+                <span>{exp.company}</span>
               </button>
             ))}
           </div>
