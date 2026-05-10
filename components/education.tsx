@@ -5,7 +5,10 @@ import { GraduationCap } from "lucide-react";
 const education = [
   {
     degree: "Master Thesis",
-    institution: "Harvard University, Slade Lab",
+    institution: "Harvard University",
+    institutionUrl: "https://www.harvard.edu",
+    lab: "Slade Lab",
+    labUrl: "https://sladelab.seas.harvard.edu",
     location: "John A. Paulson School of Engineering and Applied Sciences, USA",
     period: "Mar 2025 — Oct 2025",
     grade: "Grade: 6.0/6.0",
@@ -13,6 +16,7 @@ const education = [
   {
     degree: "M.Sc. in Robotics and Data Science",
     institution: "EPFL",
+    institutionUrl: "https://www.epfl.ch",
     location: "Swiss Federal Institute of Technology Lausanne, Switzerland",
     period: "Sep 2022 — Oct 2025",
     grade: null,
@@ -20,6 +24,7 @@ const education = [
   {
     degree: "Bachelor Exchange (3rd Year)",
     institution: "Karlsruhe Institute of Technology (KIT)",
+    institutionUrl: "https://www.kit.edu",
     location: "Germany",
     period: "Sep 2021 — Sep 2022",
     grade: null,
@@ -27,6 +32,7 @@ const education = [
   {
     degree: "B.Sc. in Microengineering",
     institution: "EPFL",
+    institutionUrl: "https://www.epfl.ch",
     location: "Swiss Federal Institute of Technology Lausanne, Switzerland",
     period: "Sep 2018 — Sep 2022",
     grade: null,
@@ -63,9 +69,29 @@ export function Education() {
                       {edu.period}
                     </span>
                   </div>
-                  <p className="text-primary font-medium mb-1">
-                    {edu.institution}
-                  </p>
+                  <div className="flex flex-wrap items-center gap-x-2 text-primary font-medium mb-1">
+                    <a
+                      href={edu.institutionUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block hover:underline decoration-2 underline-offset-4"
+                    >
+                      {edu.institution}
+                    </a>
+                    {edu.lab && (
+                      <>
+                        <span className="text-muted-foreground">|</span>
+                        <a
+                          href={edu.labUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary/80 hover:text-primary hover:underline decoration-2 underline-offset-4"
+                        >
+                          {edu.lab}
+                        </a>
+                      </>
+                    )}
+                  </div>
                   <p className="text-muted-foreground text-sm">
                     {edu.location}
                   </p>

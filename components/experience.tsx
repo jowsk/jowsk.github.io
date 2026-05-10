@@ -41,8 +41,10 @@ const experiences = [
     ],
   },
   {
-    company: "EPFL MOBOTS",
-    companyUrl: "https://www.mobots.epfl.ch",
+    company: "EPFL",
+    companyUrl: "https://www.epfl.ch",
+    lab: "Mobile Robotic Systems Group (MOBOTS)",
+    labUrl: "https://www.epfl.ch/labs/mobots/",
     title: "Student Researcher",
     period: "Autumn 2023",
     description: [
@@ -54,6 +56,8 @@ const experiences = [
   {
     company: "EPFL",
     companyUrl: "https://www.epfl.ch",
+    lab: "Basics of Mobile Robotics (MICRO-452)",
+    labUrl: "https://edu.epfl.ch/coursebook/en/basics-of-mobile-robotics-MICRO-452",
     title: "Teaching Assistant",
     period: "Autumn 2023",
     description: [
