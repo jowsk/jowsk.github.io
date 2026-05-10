@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import Link from "next/link";
 
 export function Contact() {
@@ -18,11 +18,13 @@ export function Contact() {
           get back to you!
         </p>
         <Link
-          href="mailto:joannawolski@gmail.com"
+          href="https://linkedin.com/in/joannawolski"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
         >
-          <Mail className="w-5 h-5" />
-          Say Hello
+          <Linkedin className="w-5 h-5" />
+          Connect on LinkedIn
         </Link>
       </div>
     </section>

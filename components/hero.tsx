@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Github, Linkedin, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -61,13 +61,6 @@ export function Hero() {
               aria-label="LinkedIn"
             >
               <Linkedin className="w-6 h-6" />
-            </Link>
-            <Link
-              href="mailto:joannawolski@gmail.com"
-              className="text-muted-foreground hover:text-primary transition-colors"
-              aria-label="Email"
-            >
-              <Mail className="w-6 h-6" />
             </Link>
           </div>
         </div>

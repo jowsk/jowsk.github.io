@@ -43,9 +43,9 @@ export function Education() {
   const [logoErrors, setLogoErrors] = useState<{ [key: string]: boolean }>({});
 
   const institutionLogoMap: { [key: string]: string } = {
-    "Harvard SEAS": "/logos/harvard.png",
-    "EPFL": "/logos/epfl.png",
-    "KIT": "/logos/kit.png",
+    "Harvard SEAS": "logos/harvard.png",
+    "EPFL": "logos/epfl.png",
+    "KIT": "logos/kit.png",
   };
 
   const getInstitutionLogoPath = (institutionName: string) => {
