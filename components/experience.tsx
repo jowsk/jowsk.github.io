@@ -76,6 +76,15 @@ export function Experience() {
     return `https://logo.clearbit.com/${hostname}`;
   };
 
+  const getCompanyInitials = (companyName: string) => {
+    return companyName
+      .split(" ")
+      .map((word) => word[0])
+      .join("")
+      .toUpperCase()
+      .slice(0, 2);
+  };
+
   return (
     <section id="experience" className="px-6 md:px-12 lg:px-24 py-24 bg-secondary/30">
       <div className="max-w-4xl mx-auto">
@@ -99,15 +108,20 @@ export function Experience() {
                     : "text-muted-foreground bg-card hover:text-primary hover:bg-card/80 border border-border/50"
                 }`}
               >
-                <img
-                  src={getCompanyLogoUrl(exp.companyUrl)}
-                  alt={`${exp.company} logo`}
-                  className="w-5 h-5 rounded-sm object-contain bg-white/90 p-0.5"
-                  loading="lazy"
-                  onError={(event: SyntheticEvent<HTMLImageElement>) => {
-                    event.currentTarget.style.display = "none";
-                  }}
-                />
+                <div className="w-5 h-5 rounded-sm bg-primary/20 flex items-center justify-center text-xs font-bold text-primary shrink-0">
+                  <img
+                    src={getCompanyLogoUrl(exp.companyUrl)}
+                    alt={`${exp.company} logo`}
+                    className="w-full h-full rounded-sm object-contain bg-white/90 p-0.5"
+                    loading="lazy"
+                    onError={(event: SyntheticEvent<HTMLImageElement>) => {
+                      const parent = event.currentTarget.parentElement;
+                      if (parent) {
+                        parent.textContent = getCompanyInitials(exp.company);
+                      }
+                    }}
+                  />
+                </div>
                 <span>{exp.company}</span>
               </button>
             ))}
