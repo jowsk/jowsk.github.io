@@ -5,6 +5,7 @@ import { useState } from "react";
 const experiences = [
   {
     company: "MILA Quebec",
+    companyUrl: "https://mila.quebec",
     title: "Research Collaborator",
     period: "Feb 2026 — Present",
     description: [
@@ -16,6 +17,9 @@ const experiences = [
   },
   {
     company: "Harvard SEAS",
+    companyUrl: "https://www.seas.harvard.edu",
+    lab: "Slade Lab",
+    labUrl: "https://sladelab.seas.harvard.edu",
     title: "Visiting Student Researcher",
     period: "Mar 2025 — Oct 2025",
     description: [
@@ -27,6 +31,7 @@ const experiences = [
   },
   {
     company: "Chanel",
+    companyUrl: "https://www.chanel.com",
     title: "Data Science Intern",
     period: "Sep 2024 — Mar 2025",
     description: [
@@ -37,6 +42,7 @@ const experiences = [
   },
   {
     company: "EPFL MOBOTS",
+    companyUrl: "https://www.mobots.epfl.ch",
     title: "Student Researcher",
     period: "Autumn 2023",
     description: [
@@ -47,6 +53,7 @@ const experiences = [
   },
   {
     company: "EPFL",
+    companyUrl: "https://www.epfl.ch",
     title: "Teaching Assistant",
     period: "Autumn 2023",
     description: [
