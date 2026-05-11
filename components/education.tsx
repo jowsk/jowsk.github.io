@@ -45,7 +45,7 @@ export function Education() {
   const institutionLogoMap: { [key: string]: string } = {
     "Harvard SEAS": "logos/harvard.png",
     "EPFL": "logos/epfl.png",
-    "KIT": "logos/kit.png",
+    "KIT": "logos/KIT.png",
   };
 
   const getInstitutionLogoPath = (institutionName: string) => {

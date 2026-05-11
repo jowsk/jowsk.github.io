@@ -80,7 +80,7 @@ export function Experience() {
   const companyLogoMap: { [key: string]: string } = {
     "Mila": "/logos/mila.png",
     "Harvard": "/logos/harvard.png",
-    "Chanel": "/logos/chanel.png",
+    "Chanel": "/logos/Chanel.png",
     "EPFL": "/logos/epfl.png",
   };
 
