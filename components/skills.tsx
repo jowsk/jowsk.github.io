@@ -27,7 +27,7 @@ const skillCategories = [
   },
   {
     title: "Embedded Systems",
-    skills: ["STM32 Microcontrollers"],
+    skills: ["STM32 Microcontrollers","FPGA", "Jetson Nano"],
   },
   {
     title: "Experimental Systems",

@@ -20,11 +20,13 @@ export function Hero() {
             <span className="text-balance">Joanna Wolski</span>
           </h1>
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-muted-foreground mb-8 leading-tight">
-            <span className="text-balance">Robotics & Machine Learning Engineer</span>
+            <span className="text-balance">Robotics & ML Engineer</span>
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
-            M.Sc. in Robotics and Data Science from EPFL, currently researching assistive robotics at MILA Quebec.
-            Specializing in <span className="text-primary font-medium">autonomous navigation</span>, <span className="text-primary font-medium">wearable exoskeletons</span>, and <span className="text-primary font-medium">vision-language models</span>.
+            Currently collaborating researcher at Mila Quebec. 
+
+            Focused on deploying foundation models in real-world robotic systems. Experience across leading research
+            labs including <span className="text-primary font-medium">Mila</span>, <span className="text-primary font-medium">Harvard</span>, and <span className="text-primary font-medium">EPFL</span>.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-12">
@@ -66,12 +68,12 @@ export function Hero() {
         </div>
 
         <div className="self-center md:self-auto">
-          <div className="w-40 h-40 md:w-64 md:h-64 rounded-3xl overflow-hidden border border-border/60 shadow-lg">
+          <div className="w-40 h-56 md:w-64 md:h-80 rounded-3xl overflow-hidden border border-border/60 shadow-lg">
             <Image
-              src="/placeholder-user.jpg"
+              src="/jo_pp.jpg"
               alt="Portrait of Joanna Wolski"
               width={256}
-              height={256}
+              height={384}
               className="w-full h-full object-cover"
               priority
             />

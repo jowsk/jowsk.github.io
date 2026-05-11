@@ -115,13 +115,13 @@ export function Experience() {
               <button
                 key={`${exp.company}-${exp.title}`}
                 onClick={() => setActiveTab(index)}
-                className={`px-5 py-3 text-sm font-medium whitespace-nowrap text-left rounded-xl transition-all duration-300 flex items-center gap-2 ${
+                className={`px-5 py-3 text-sm font-medium text-left rounded-xl transition-all duration-300 flex items-center gap-2 ${
                   activeTab === index
                     ? "text-primary-foreground bg-primary shadow-md"
                     : "text-muted-foreground bg-card hover:text-primary hover:bg-card/80 border border-border/50"
                 }`}
               >
-                <div className="w-5 h-5 bg-primary/20 flex items-center justify-center text-xs font-bold text-primary shrink-0 overflow-hidden">
+                <div className="w-5 h-5 flex items-center justify-center text-xs font-bold text-primary shrink-0 overflow-hidden">
                   {!logoErrors[exp.companyShort] ? (
                     <img
                       src={getCompanyLogoPath(exp.companyShort)}
@@ -134,7 +134,16 @@ export function Experience() {
                     getCompanyInitials(exp.companyShort)
                   )}
                 </div>
-                <span>{exp.companyShort}</span>
+                <div className="flex flex-col leading-tight">
+                  <span>{exp.companyShort}</span>
+                  <span
+                    className={`text-xs ${
+                      activeTab === index ? "text-primary-foreground/80" : "text-muted-foreground/80"
+                    }`}
+                  >
+                    {exp.period}
+                  </span>
+                </div>
               </button>
             ))}
           </div>

@@ -25,6 +25,13 @@ const highlights = [
   },
 ];
 
+const languages = [
+  { name: "French", level: "Mother Tongue" },
+  { name: "English", level: "C1" },
+  { name: "Polish", level: "Fluent" },
+  { name: "German", level: "B2" },
+];
+
 export function About() {
   return (
     <section id="about" className="px-6 md:px-12 lg:px-24 py-24">
@@ -51,9 +58,8 @@ export function About() {
               exoskeletons at Harvard and computer vision pipelines at Chanel.
             </p>
             <p>
-              I speak English, French (native), Polish (fluent), and German. When I&apos;m not training 
-              RL policies or debugging sensor fusion algorithms, I enjoy exploring the intersection 
-              of robotics and human augmentation technologies.
+              When I&apos;m not training RL policies or debugging sensor fusion algorithms, I enjoy 
+              exploring the intersection of robotics and human augmentation technologies.
             </p>
           </div>
 
@@ -72,6 +78,23 @@ export function About() {
                 <p className="text-muted-foreground text-xs leading-relaxed">
                   {item.description}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h3 className="text-xl font-semibold text-foreground text-center mb-6">
+            Languages
+          </h3>
+          <div className="flex flex-nowrap gap-4 overflow-x-auto pb-1">
+            {languages.map((language) => (
+              <div
+                key={language.name}
+                className="min-w-[170px] flex-1 bg-card rounded-2xl p-5 border border-border/50 text-center"
+              >
+                <p className="text-foreground font-semibold">{language.name}</p>
+                <p className="text-muted-foreground text-sm mt-1">{language.level}</p>
               </div>
             ))}
           </div>

@@ -1,9 +1,22 @@
 "use client";
 
-import { ExternalLink, Github, Folder } from "lucide-react";
+import { ExternalLink, Folder } from "lucide-react";
 import Link from "next/link";
 
 const featuredProjects = [
+  {
+    title: "Robot Guide Dog - Autonomous Navigation for Visually Impaired",
+    description:
+      "Developed a robotic guide dog system for assistive navigation using Vision-Language Models and Reinforcement Learning on a Unitree Go2 quadruped robot. Integrated multimodal perception for real-time environment understanding and implemented adaptive path planning algorithms to navigate complex urban environments safely.",
+    technologies: ["Python", "SLAM", "VLM", "Path Planning", "Reinforcement Learning"],
+    github: "https://github.com",
+    demo: null,
+    image: "/projects/robot_guide_dog.jpg",
+  },
+
+];
+
+const otherProjects = [
   {
     title: "Aerial Robotics - Autonomous Drone Navigation",
     description:
@@ -31,9 +44,6 @@ const featuredProjects = [
     demo: null,
     image: "/projects/moderation.jpg",
   },
-];
-
-const otherProjects = [
   {
     title: "Computational Motor Control",
     description:
@@ -139,21 +149,12 @@ export function Projects() {
                     </span>
                   ))}
                 </div>
-                <div
-                  className={`flex gap-4 ${
-                    index % 2 === 1 ? "md:justify-end" : ""
-                  }`}
-                >
-                  <Link
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors"
-                    aria-label="View on GitHub"
+                {project.demo && (
+                  <div
+                    className={`flex gap-4 ${
+                      index % 2 === 1 ? "md:justify-end" : ""
+                    }`}
                   >
-                    <Github className="w-5 h-5" />
-                  </Link>
-                  {project.demo && (
                     <Link
                       href={project.demo}
                       target="_blank"
@@ -163,8 +164,8 @@ export function Projects() {
                     >
                       <ExternalLink className="w-5 h-5" />
                     </Link>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -180,19 +181,10 @@ export function Projects() {
               key={project.title}
               className="bg-card p-6 rounded-2xl border border-border/50 hover:border-primary/30 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group"
             >
-              <div className="flex justify-between items-start mb-5">
+              <div className="flex items-start mb-5">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
                   <Folder className="w-6 h-6 text-primary" />
                 </div>
-                <Link
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                  aria-label="View on GitHub"
-                >
-                  <Github className="w-5 h-5" />
-                </Link>
               </div>
               <h4 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                 {project.title}

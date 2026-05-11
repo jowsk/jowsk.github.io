@@ -78,7 +78,7 @@ export function Education() {
               className="bg-card rounded-2xl p-6 border border-border/50 hover:border-primary/30 hover:shadow-md transition-all duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 flex items-center justify-center shrink-0 overflow-hidden">
+                <div className="w-12 h-12 flex items-center justify-center shrink-0 overflow-hidden">
                 {!logoErrors[edu.institution] ? (
                   <img
                     src={getInstitutionLogoPath(edu.institution)}

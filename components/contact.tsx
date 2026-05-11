@@ -12,10 +12,7 @@ export function Contact() {
           Get In Touch
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-10">
-          I&apos;m currently open to new opportunities in robotics and machine learning. 
-          Whether you have a challenging project, want to discuss the latest in autonomous 
-          systems, or just want to say hi, my inbox is always open. I&apos;ll do my best to 
-          get back to you!
+          I&apos;m currently open to new opportunities in robotics and machine learning in Switzerland or France. Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out!
         </p>
         <Link
           href="https://linkedin.com/in/joannawolski"
