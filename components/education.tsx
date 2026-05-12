@@ -70,6 +70,9 @@ export function Education() {
         <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
           Education
         </h2>
+        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+          Summary of my academic background.
+        </p>
 
         <div className="space-y-6">
           {education.map((edu) => (

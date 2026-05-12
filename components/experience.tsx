@@ -103,10 +103,13 @@ export function Experience() {
 
   return (
     <section id="experience" className="px-6 md:px-12 lg:px-24 py-24 bg-secondary/30">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
           Experience
         </h2>
+        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+          These are my past and current research and industry experiences.
+        </p>
 
         <div className="flex flex-col md:flex-row gap-4 md:gap-8">
           {/* Tabs */}
@@ -149,7 +152,7 @@ export function Experience() {
           </div>
 
           {/* Content */}
-          <div className="py-4 md:py-0 md:pl-6 flex-1 bg-card rounded-2xl p-6 border border-border/50">
+          <div className="py-4 md:py-0 md:pl-8 flex-1 bg-card rounded-2xl p-8 md:p-10 min-h-[26rem] md:min-h-[25rem] border border-border/50 flex flex-col justify-center">
             <h3 className="text-xl font-semibold text-foreground mb-1">
               {experiences[activeTab].title}
             </h3>

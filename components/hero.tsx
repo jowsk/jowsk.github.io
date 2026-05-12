@@ -23,18 +23,17 @@ export function Hero() {
             <span className="text-balance">Robotics & ML Engineer</span>
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
-            Currently collaborating researcher at Mila Quebec. 
-
-            Focused on deploying foundation models in real-world robotic systems. Experience across leading research
-            labs including <span className="text-primary font-medium">Mila</span>, <span className="text-primary font-medium">Harvard</span>, and <span className="text-primary font-medium">EPFL</span>.
+          Currently a Collaborating Researcher at <span className="text-primary font-medium">Mila - Quebec Artificial Intelligence Institute</span>,
+          I focus on bridging the gap between foundation models and real-world robotics applications.
+          My work spans leading international research labs, including <span className="text-primary font-medium">Harvard</span> and <span className="text-primary font-medium">EPFL</span>.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-12">
           <Link
-            href="#projects"
+            href="#experience"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-full hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
           >
-            View Projects
+            View Experience
             <ExternalLink className="w-4 h-4" />
           </Link>
           <Link

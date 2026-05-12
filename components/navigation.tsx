@@ -7,14 +7,16 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
   { label: "Education", href: "#education" },
+  { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const visibleNavItems = navItems.filter(
+    (item) => item.href !== "#projects" && item.label.toLowerCase() !== "projects"
+  );
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -25,7 +27,7 @@ export function Navigation() {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
+          {visibleNavItems.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
@@ -60,7 +62,7 @@ export function Navigation() {
       {isOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border">
           <ul className="flex flex-col items-center gap-6 py-8">
-            {navItems.map((item) => (
+            {visibleNavItems.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}

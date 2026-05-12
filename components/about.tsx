@@ -1,12 +1,12 @@
 "use client";
 
-import { Bot, Brain, Cpu, Eye } from "lucide-react";
+import { Bot, Brain, Flame, ScanFace } from "lucide-react";
 
 const highlights = [
   {
     icon: Bot,
     title: "Robotics",
-    description: "SLAM, autonomous navigation, motion planning, sensor fusion",
+    description: "SLAM, perception, navigation, motion planning, control",
   },
   {
     icon: Brain,
@@ -14,15 +14,25 @@ const highlights = [
     description: "Deep learning, reinforcement learning, VLMs, NLP",
   },
   {
-    icon: Eye,
-    title: "Computer Vision",
-    description: "Object detection, CNNs, multimodal perception",
+    icon: ScanFace,
+    title: "Personality",
+    description: "Curious, creative, positive",
   },
-  {
-    icon: Cpu,
-    title: "Embedded Systems",
-    description: "STM32 microcontrollers, real-time control, wearable robotics",
+    {
+    icon: Flame,
+    title: "Passions",
+    description: "Skiing, Kitefoiling",
   },
+  // {
+  //   icon: Eye,
+  //   title: "Computer Vision",
+  //   description: "Object detection, CNNs, multimodal perception",
+  // },
+  // {
+  //   icon: Cpu,
+  //   title: "Embedded Systems",
+  //   description: "STM32 microcontrollers, real-time control, wearable robotics",
+  // },
 ];
 
 const languages = [
@@ -35,31 +45,24 @@ const languages = [
 export function About() {
   return (
     <section id="about" className="px-6 md:px-12 lg:px-24 py-24">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
           About Me
         </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
-          Building intelligent systems that bridge software and the physical world
-        </p>
 
-        <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-start">
+        <div className="grid md:grid-cols-[13fr_7fr] gap-12 items-start">
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              I&apos;m a Robotics and Machine Learning Engineer currently pursuing my M.Sc. in Robotics 
-              and Data Science at EPFL, with a Master Thesis at Harvard University&apos;s Slade Lab. 
-              My passion lies in building intelligent systems that can perceive, reason, and act 
-              in the physical world.
+              I&apos;m an EPFL engineer specializing in Robotics and Machine Learning, passionate about building intelligent systems that can perceive, reason, and act in the physical world. My interests lie at the intersection of machine learning, embodied AI, and real-world robotics.
             </p>
             <p>
-              Currently, I&apos;m a Research Collaborator at MILA Quebec, developing a robotic guide 
-              dog system for assistive navigation using Vision-Language Models and Reinforcement 
-              Learning on a Unitree Go2 quadruped robot. Previously, I worked on wearable robotic 
-              exoskeletons at Harvard and computer vision pipelines at Chanel.
+              Currently, I&apos;m a Research Collaborator at Mila Quebec Artificial Intelligence Institute, where I develop a robotic guide dog system for assistive navigation. Previously, I worked at the Slade Lab at Harvard University SEAS on wearable robotic exoskeletons, and at Chanel as a Data Scientist intern.
             </p>
             <p>
-              When I&apos;m not training RL policies or debugging sensor fusion algorithms, I enjoy 
-              exploring the intersection of robotics and human augmentation technologies.
+              Wherever I am, I&apos;m driven by curiosity. I love research and enjoy finding new solutions to both old and emerging problems.
+            </p>
+            <p>
+              When I&apos;m not in the lab, you&apos;ll probably find me skiing in the mountains or kitefoiling on the water.
             </p>
           </div>
 
